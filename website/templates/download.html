@@ -1,0 +1,84 @@
+{% extends "base.html" %} {% block title%} Download Page {% endblock %}
+
+
+    {% block content %}
+
+    <h1 class="heading download">Download File</h1>
+      
+    <div class="container download">
+        <div class="row download">
+            <div class="col-lg-6">
+                <div class="imagebox">
+                    <img src="{{yt.thumbnail_url}}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 info">
+                <div>
+        
+                    <p class="videotitle">{{yt.title}}</p>
+                    
+                    
+                </div>
+                <div class="audiobutton">
+    
+                                <form action="{{url_for('views.download_video')}}" method="POST" >
+                                    <div class="row resolution">
+                                        <div class="col-lg-6 selector">
+                                            <select name="atag" class="form-select" id="select">
+                                                {% for i in yt.streams.filter(progressive=True) %}
+                                                <option value="{{i.itag}}">{{i.resolution}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 downloadbutton">
+                                            <button type="submit" class="btn btn-outline-danger">Download</button>
+                                        </div>
+                                        
+                                    
+                                    
+                                    </div>
+                                        
+                                </form>
+                            </div>
+                            
+                           <p class="orpara"> ------------ OR -----------</p>
+                           <div class="audiobutton">
+                            <form action="{{url_for('views.download_audio')}}" method="POST">
+                                <button type="submit" class="btn btn-danger ">Download Audio(as mp4)</button>
+                            </form>
+                           </div>
+                               
+                         
+                        
+                       
+                    </div>
+                
+                    </div>
+                </div>
+               
+            </div>  
+                    </div>
+                    
+  
+    
+    
+    <footer>
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-4">
+                  
+              </div>
+              <div class="col-lg-4">
+               <p id="footer">Please wait while your file downloads. This may take some time depending on the size</p>
+              </div>
+              <div class="col-lg-4 darkbutton">
+                
+                  <button id="dark"><i class="fa-solid fa-moon"></i></button>
+              </div>
+          </div>
+      </footer>
+        
+  
+   
+    {% endblock %}
+      

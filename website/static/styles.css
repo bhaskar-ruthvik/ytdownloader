@@ -1,0 +1,264 @@
+.textbox {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+       
+}
+
+h1{
+ font-family: 'Kanit', sans-serif;
+ text-align: center;
+ font-weight: auto;
+ margin: auto;
+}
+
+
+p{
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: 600;
+}
+
+html.dark,body.dark{
+        background-color: #111111;
+        color: white
+}
+
+#dark{
+        background-color: #111111;
+        color: #ffd86b;
+        border-radius: 5rem;
+        height: 3rem;
+        width: 3rem;
+        margin-left: 3rem;
+        border: 0px;
+        
+
+}
+.darkbutton{
+        display: flex;
+        justify-content: right;
+}
+.container-fluid{
+        padding-right: 3rem;
+        padding-left: 3rem;
+        margin: 0;
+        min-height: 100%
+}
+.container{
+        max-width : 100%
+}
+
+.heading{
+        padding-top:5rem;
+        padding-bottom: 5rem;
+        font-size: 1.5rem;
+}
+
+.searchbox{
+       
+        border-radius: 5rem;
+        border: 1;
+        border-color: #181A1B;
+        
+}
+
+footer{
+        position: absolute;
+        bottom: 0;
+        width : 100%;
+        padding-bottom: 2rem;
+        padding-right: 2rem; 
+}
+
+.main{
+        margin-top: 22rem;
+}
+
+.logo{
+        padding-left: 6%;
+        height: 20%;
+}
+
+.heading.ytlogo{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+}
+
+button.searchbox{
+       
+        height: 2.7rem;
+        left:31.5rem
+        
+}
+
+input.searchbox{
+        width: 30rem;
+        height: 2.7rem;
+        padding-left: 0.7rem;
+        
+        outline: #181A1B;
+        
+  
+    
+}
+input:focus{
+        outline: none;
+    }
+
+.darklogo{
+        fill: white;    
+}
+
+
+.inputholder{
+        width: 100%;
+        padding-top: 4%;
+        display: flex;
+        justify-content: center;
+        white-space: no-wrap;
+}
+
+img{           
+        width: 100%;
+        border-radius: 5rem;
+}
+
+.imagebox{
+        display: inline-flex;
+        justify-content: right;
+        vertical-align: baseline;
+        height: 100%;
+}
+
+.row.download{
+        width: 60%;
+
+}
+.container.download{
+        display: flex;
+        justify-content: center;
+}
+
+@media (min-width: 992px) {
+        .selector{
+                display: flex;
+                justify-content: right;
+                padding-right: 0.5rem;
+        }
+
+}
+
+
+@media (max-width: 992px){
+        .selector{
+                display: flex;
+                justify-content: center;
+                padding-bottom : 1rem;
+        }
+        .downloadbutton{
+                display: flex;
+                justify-content: center;
+        }
+        .logo{
+                padding-left: 15%
+        }
+}
+@media (max-width: 749px){
+        input.searchbox{
+                width: 25rem;
+        }
+}
+@media (max-width: 669px){
+        input.searchbox{
+                width: 18rem;
+        }
+}
+@media (max-width: 557px){
+        input.searchbox{
+                width: 13rem;
+        }
+}
+@media (max-width: 450px){
+        input.searchbox{
+                width: 8rem;
+        }
+}
+.form-select{
+        width: 10rem;
+        
+}
+
+.videotitle{
+        padding-top: 5rem;
+        text-align: center;
+        font-size: 1.5rem;
+}
+
+
+
+.row.resolution{
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        
+}
+
+.orpara{
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+
+
+}
+
+.audiobutton{
+        display: flex;
+        justify-content: center;
+}
+
+.btn{
+        font-family: "Ubuntu" , sans-serif;
+}
+.darkform{
+        background-color: #181A1B;
+        color: white;
+}
+
+.submitbutton{
+        background-color: #181A1B;
+        color: white;
+        width: 3rem;
+}
+
+input.searchbox.dark{
+        background-color: #DDDDDD;
+        color:#0E0F0F;
+        border: 1px solid white;
+        outline : none;
+}
+.submitbutton.dark{
+        border: 0.3px solid #DDDDDD;
+        outline: none;
+}
+.heading.download{
+        text-decoration: underline;
+}
+
+#footer{
+        font-weight: 400;
+       opacity: 0;
+}
+#footer.animate{
+        animation: footeranimate 10s;
+}
+@keyframes footeranimate{
+        from{
+                opacity:0;
+        }
+        50%{
+                opacity:1;
+        }
+        to{
+                opacity: 0;
+        }
+}
+

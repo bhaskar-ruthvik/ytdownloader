@@ -13,6 +13,11 @@ h1{
  margin: auto;
 }
 
+.back-button{
+        margin-top: 20px;
+        margin-left:20px;
+        font-size: 30px;
+}
 
 p{
   font-family: 'Montserrat', 'sans-serif';

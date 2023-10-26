@@ -1,7 +1,4 @@
 from io import BytesIO
-from multiprocessing.spawn import old_main_modules
-import os
-
 from flask import Blueprint,render_template,request,session,flash,redirect,url_for,send_file
 from pytube import YouTube
 
@@ -14,11 +11,13 @@ def home():
     if request.method == "POST":
         global url
         url = request.form.get("text")
+        print(url)
         try:
             yt = YouTube(url)
             yt.check_availability()
             
         except: 
+            print("Exception Occured")
             return render_template("home.html")
         return render_template("download.html", yt=yt)
     return render_template("home.html")
